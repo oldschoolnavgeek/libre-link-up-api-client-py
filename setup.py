@@ -17,6 +17,10 @@ setup(
         "requests>=2.31.0",
         "pyyaml>=6.0.1",
         "python-dateutil>=2.8.2",
+        "fastapi>=0.104.0",
+        "uvicorn[standard]>=0.24.0",
+        "psycopg2-binary>=2.9.9",
+        "pydantic>=2.5.0",
     ],
     python_requires=">=3.8",
     classifiers=[

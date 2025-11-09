@@ -4,6 +4,20 @@
 libre_link_up:
   username: "your-email@example.com"
   password: "your-password"
-  client_version: "4.12.0"  # Optional, defaults to 4.12.0
+  client_version: "4.16.0"  # Optional, defaults to 4.16.0 - check the version of your LibreLinkUp App
   connection_identifier: null  # Optional: patient name string or leave null for first connection
+
+# Database configuration (for local development)
+# For Cloud Run, use environment variables instead:
+# DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD
+database:
+  host: "localhost"  # For Cloud SQL, use format: PROJECT_ID:REGION:INSTANCE_NAME
+  port: 5432
+  name: "librelinkup"
+  user: "postgres"
+  password: "your-database-password"
+
+# Service configuration
+service:
+  poll_interval_minutes: 15  # Polling interval (used by Cloud Scheduler, not the service itself)
 

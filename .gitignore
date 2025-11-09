@@ -221,3 +221,6 @@ config.yaml
 
 # Data exports
 *.csv
+
+# Archive folder (contains temporary/obsolete files)
+archive/

@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
+from pickletools import float8
 from typing import Optional
 
 
@@ -19,7 +20,7 @@ class TrendType(str, Enum):
 @dataclass
 class LibreCgmData:
     """Continuous Glucose Monitor data"""
-    value: int
+    value: float8
     is_high: bool
     is_low: bool
     trend: TrendType
@@ -38,8 +39,8 @@ class Connection:
     status: int
     first_name: str
     last_name: str
-    target_low: int
-    target_high: int
+    target_low: float8
+    target_high: float8
     uom: int
 
     @property
@@ -60,7 +61,7 @@ class GlucoseItem:
     FactoryTimestamp: str
     Timestamp: str
     type: int
-    ValueInMgPerDl: int
+    ValueInMgPerDl: float8
     TrendArrow: Optional[int]
     TrendMessage: Optional[str]
     MeasurementColor: int
